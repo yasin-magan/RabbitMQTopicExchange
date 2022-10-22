@@ -26,10 +26,18 @@ connection.Close();
   2. <p> when none of the binding keys use wildcards the bevabior is typical Direct Exchange (why not use Direct Exchange)</p>
 
 <h5> Project setup </h5>
+1. for the the three solutions , install there packages
 <code>
- install-package microsoft.entityframeworkcore.sqlserver
- install-package Microsoft.EntityFrameworkCore.InMemory
- Install-Package RabbitMQ.Client
+   I. install-package microsoft.entityframeworkcore.sqlserver
+   II. install-package Microsoft.EntityFrameworkCore.InMemory
+   II.   Install-Package RabbitMQ.Client
  </code>
- 
+2. Change the connection to your host and user name and password
+ <code>
+ factory.Uri = new Uri("amqp://user:password@localhost:5672");
+  </code>
+3. Fireup the CargoShipment Solution,  then other two applictions
+4. Post Product on the CargoShipment API and include the Address Malaysia e.g "Malaysia.Selangor"  then post the product
+5. The middleWare Application will listen to the broker and upon receiving message will post the product to the respective courier delivery
+6. On Cargoshipment.Currier project API click get all products , you will see the new product of Address Malaysia.* routing key added to the database.
 
