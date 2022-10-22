@@ -20,8 +20,14 @@ channel.Close();
 connection.Close();
 </code>
 
-<h3> Two Importantant things to avoid when using Topic Exchange</h3>
+<h5> Two Importantant things to avoid when using Topic Exchange</h5>
 
   1. <p> when try binding key '#' to catch all the messages in the topic exchange, the the bevabior is typical Fanout Exchange (why not use Fanout Exchange) </p>
   2. <p> when none of the binding keys use wildcards the bevabior is typical Direct Exchange (why not use Direct Exchange)</p>
+
+<h5> Project setup </h5>
+<code>
+ install-package microsoft.entityframeworkcore.sqlserver
+ </code>
+ 
 
