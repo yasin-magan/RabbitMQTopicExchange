@@ -14,6 +14,7 @@ var connection = factory.CreateConnection();
 var channel = connection.CreateModel();
 
 // declare resources here,  events .....
+ 
 channel.Close();
 connection.Close();
   </code>
