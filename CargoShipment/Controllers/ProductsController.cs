@@ -1,6 +1,11 @@
 ﻿using CargoShipment.Models;
+using CargoShipment.Services;
+using Microsoft.AspNetCore.Connections;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
+using System.Text;
 
 namespace CargoShipment.Controllers
 {
@@ -9,11 +14,14 @@ namespace CargoShipment.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly CargoContext _context;
-
-        public ProductsController(CargoContext context)
+        private readonly IRabbitMQMessagingService _rabbitMQMessagingService;
+        //private readonly IDeliveryRegionService _deliveryRegionService;
+        public ProductsController(CargoContext context , 
+            IRabbitMQMessagingService rabbitMQMessagingService
+            )
         {
             _context = context;
-
+            _rabbitMQMessagingService = rabbitMQMessagingService;
             _context.Database.EnsureCreated();
         }
 
@@ -22,7 +30,7 @@ namespace CargoShipment.Controllers
         {
             return Ok(await _context.Products.ToArrayAsync());
         }
-
+       
         [HttpGet("{id}")]
         public async Task<ActionResult> GetProduct(int id)
         {
@@ -37,13 +45,15 @@ namespace CargoShipment.Controllers
         [HttpPost]
         public async Task<ActionResult<Product>> PostProduct(Product product)
         {
-            /*
+
             if (!ModelState.IsValid) {
                 return BadRequest();
             }
-            */
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
+            var message = $"{product.Name};{product.Sku}";
+           _rabbitMQMessagingService.SendMessage(product.Address, message);
+
 
             return CreatedAtAction(
                 "GetProduct",

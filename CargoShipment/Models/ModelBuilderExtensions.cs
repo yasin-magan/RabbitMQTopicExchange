@@ -7,15 +7,7 @@ namespace CargoShipment.Models
         public static void Seed(this ModelBuilder modelBuilder)
         {
 
-            modelBuilder.Entity<Receipient>().HasData(
-        new Receipient { Id = 1001, UserName = "Ridwaan", Role = "Admin", Address = "Hargeisa 26 June", Phone = "+252-434343", Status = "Active" },
-        new Receipient { Id = 1002, UserName = "Cali", Role = "User", Address = "Hargeisa 26 June", Phone = "+252-434343", Status = "Inactive" },
-        new Receipient { Id = 1003, UserName = "Yasin", Role = "Admin", Address = "Kuala Lumpur , Serdang", Phone = "+6152-434343", Status = "Active" },
-        new Receipient { Id = 1004, UserName = "Mahad", Role = "Admin", Address = "Burco 26 June", Phone = "+252-677" },
-        new Receipient { Id = 1005, UserName = "Aden", Role = "User", Address = "Borama, sheikh ali", Phone = "+252-66555", Status = "Inactive" },
-        new Receipient { Id = 1006, UserName = "Naasir", Role = "User", Address = "Ceerigaabo", Phone = "+252-456564", Status = "Active" });
-
-
+       
             modelBuilder.Entity<Category>().HasData(
                 new Category { Id = 1, Name = "Active Wear - Men" },
                 new Category { Id = 2, Name = "Active Wear - Women" },

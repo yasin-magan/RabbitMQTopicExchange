@@ -12,12 +12,12 @@ namespace CargoShipment.Models
                 .HasMany(c => c.Products)
                 .WithOne(a => a.Category)
                 .HasForeignKey(a => a.CategoryId);
-            modelBuilder.Entity<Receipient>();
+            modelBuilder.Entity<Delivery>();
             modelBuilder.Seed();
         }
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Receipient> Receipients { get; set; }
+        public DbSet<Delivery> Deliverys { get; set; }
     }
 }
