@@ -28,10 +28,13 @@ connection.Close();
 <h5> Project setup </h5>
 1. for the the three solutions , install there packages
 <code>
+ 
    I.    <p> install-package microsoft.entityframeworkcore.sqlserver </p>
    II.   <p> install-package Microsoft.EntityFrameworkCore.InMemory </p>
-   II.    <p> Install-Package RabbitMQ.Client </p>
+   II.   <p> Install-Package RabbitMQ.Client </p>
+ 
  </code>
+ 
 2. Change the connection to your host and user name and password
  <code>
  factory.Uri = new Uri("amqp://user:password@localhost:5672");
