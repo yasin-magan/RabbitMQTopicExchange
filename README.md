@@ -29,6 +29,7 @@ connection.Close();
 <code>
  install-package microsoft.entityframeworkcore.sqlserver
  install-package Microsoft.EntityFrameworkCore.InMemory
+ Install-Package RabbitMQ.Client
  </code>
  
 
