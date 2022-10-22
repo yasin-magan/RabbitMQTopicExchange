@@ -13,7 +13,8 @@ factory.Uri = new Uri("amqp://user:password@localhost:5672");
 var connection = factory.CreateConnection();
 var channel = connection.CreateModel();
   </code>
-<p> declare resources here,  events .....</p>
+  
+<p> Declare resources here,  events .....</p>
  <code>
 channel.Close();
 connection.Close();
