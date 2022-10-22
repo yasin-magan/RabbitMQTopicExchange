@@ -36,8 +36,8 @@ connection.Close();
  <code>
  factory.Uri = new Uri("amqp://user:password@localhost:5672");
   </code>
-3. Fireup the CargoShipment Solution,  then other two applictions
-4. Post Product on the CargoShipment API and include the Address Malaysia e.g "Malaysia.Selangor"  then post the product
-5. The middleWare Application will listen to the broker and upon receiving message will post the product to the respective courier delivery
-6. On Cargoshipment.Currier project API click get all products , you will see the new product of Address Malaysia.* routing key added to the database.
+3. <p>Fireup the CargoShipment Solution,  then other two applictions</p>
+4. <p> Post Product on the CargoShipment API and include the Address Malaysia e.g "Malaysia.Selangor"  then post the product </p>
+5. <p> The middleWare Application will listen to the broker and upon receiving message will post the product to the respective courier delivery </p>
+6. <p> On Cargoshipment.Currier project API click get all products , you will see the new product of Address Malaysia.* routing key added to the database </p>
 
