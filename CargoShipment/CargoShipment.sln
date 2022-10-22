@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CargoShipment", "CargoShipment.csproj", "{4F5C8E94-41A3-47BB-8276-EDCD4B79BAE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CargoShipment", "CargoShipment.csproj", "{4F5C8E94-41A3-47BB-8276-EDCD4B79BAE6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CargoShipment.Currier", "..\ShipmentPartner.API\CargoShipment.Currier.csproj", "{E9F94666-56BF-4F36-9CC5-202881EFA407}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{4F5C8E94-41A3-47BB-8276-EDCD4B79BAE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F5C8E94-41A3-47BB-8276-EDCD4B79BAE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F5C8E94-41A3-47BB-8276-EDCD4B79BAE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9F94666-56BF-4F36-9CC5-202881EFA407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9F94666-56BF-4F36-9CC5-202881EFA407}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9F94666-56BF-4F36-9CC5-202881EFA407}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9F94666-56BF-4F36-9CC5-202881EFA407}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
