@@ -28,6 +28,7 @@ connection.Close();
 <h5> Project setup </h5>
 <code>
  install-package microsoft.entityframeworkcore.sqlserver
+ install-package Microsoft.EntityFrameworkCore.InMemory
  </code>
  
 
