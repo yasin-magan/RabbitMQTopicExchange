@@ -2,7 +2,7 @@
 <p> Topic Exchange are ideal to use in scenarios whereby  some background task will permformed based on the message received as well as logging events or any messaging that involve categorization</p>
 <p> To enable RabbitMQ Management </p>
 
-$ npm install --save @github/clipboard-copy-element
+$   rabbitmq-plugins enable rabbitmq_management
 ## Usage
 
 ### Script
@@ -22,7 +22,7 @@ With a script tag:
 ### Markup
 
  <code>
-  rabbitmq-plugins enable rabbitmq_management
+
   </code>
   
 <p> Cennection Code</p>
