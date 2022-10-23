@@ -17,12 +17,12 @@ With a script tag:
 
 ### Cennection Code
 
-<code>
-``` var factory = new ConnectionFactory();
+```js
+var factory = new ConnectionFactory();
 factory.Uri = new Uri("amqp://user:password@localhost:5672");
 var connection = factory.CreateConnection();
-var channel = connection.CreateModel();```
-</code>
+var channel = connection.CreateModel();
+```
   
  <p> Declare resources here,  events .....</p>
  <code>
