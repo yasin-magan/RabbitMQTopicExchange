@@ -2,6 +2,25 @@
 <p> Topic Exchange are ideal to use in scenarios whereby  some background task will permformed based on the message received as well as logging events or any messaging that involve categorization</p>
 <p> To enable RabbitMQ Management </p>
 
+$ npm install --save @github/clipboard-copy-element
+## Usage
+
+### Script
+
+Import as ES modules:
+
+```js
+import '@github/clipboard-copy-element'
+```
+
+With a script tag:
+
+```html
+<script type="module" src="./node_modules/@github/clipboard-copy-element/dist/index.js">
+```
+
+### Markup
+
  <code>
   rabbitmq-plugins enable rabbitmq_management
   </code>
