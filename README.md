@@ -1,16 +1,12 @@
 # RabbitMQ Topic Exchange Implementation in .NET 6
 <p> Topic Exchange are ideal to use in scenarios whereby  some background task will permformed based on the message received as well as logging events or any messaging that involve categorization</p>
-<p> To enable RabbitMQ Management </p>
 
-$   rabbitmq-plugins enable rabbitmq_management
 ## Usage
 
-### Script
-
-Import as ES modules:
+<p> To enable RabbitMQ Management </p>
 
 ```js
-import '@github/clipboard-copy-element'
+rabbitmq-plugins enable rabbitmq_management
 ```
 
 With a script tag:
@@ -19,18 +15,13 @@ With a script tag:
 <script type="module" src="./node_modules/@github/clipboard-copy-element/dist/index.js">
 ```
 
-### Markup
+### Cennection Code
 
- <code>
-
-  </code>
-  
-<p> Cennection Code</p>
 <code>
-var factory = new ConnectionFactory();
+``` var factory = new ConnectionFactory();
 factory.Uri = new Uri("amqp://user:password@localhost:5672");
 var connection = factory.CreateConnection();
-var channel = connection.CreateModel();
+var channel = connection.CreateModel();```
 </code>
   
  <p> Declare resources here,  events .....</p>
