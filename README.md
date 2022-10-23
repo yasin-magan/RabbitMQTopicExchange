@@ -1,5 +1,11 @@
 # RabbitMQ Topic Exchange Implementation in .NET 6
 <p> Topic Exchange are ideal to use in scenarios whereby  some background task will permformed based on the message received as well as logging events or any messaging that involve categorization</p>
+  
+## Two Importantant things to avoid when using Topic Exchange
+
+  1. <p> when try binding key '#' to catch all the messages in the topic exchange, the the bevabior is typical Fanout Exchange (why not use Fanout Exchange) </p>
+  2. <p> when none of the binding keys use wildcards the bevabior is typical Direct Exchange (why not use Direct Exchange)</p>
+
 
 ## Usage
 
@@ -19,32 +25,25 @@ With a script tag:
 
 ```js
 var factory = new ConnectionFactory();
+//Change the connection to your host and user name and password
 factory.Uri = new Uri("amqp://user:password@localhost:5672");
 var connection = factory.CreateConnection();
 var channel = connection.CreateModel();
-```
-  
  <p> Declare resources here,  events .....</p>
- <code>
-channel.Close();
+ channel.Close();
 connection.Close();
-</code>
+```
 
-<h5> Two Importantant things to avoid when using Topic Exchange</h5>
 
-  1. <p> when try binding key '#' to catch all the messages in the topic exchange, the the bevabior is typical Fanout Exchange (why not use Fanout Exchange) </p>
-  2. <p> when none of the binding keys use wildcards the bevabior is typical Direct Exchange (why not use Direct Exchange)</p>
-
-<h5> Project setup </h5>
+### Project setup
 1. for the the three solutions , install there packages
-<code>
- 
-   I.    <p> install-package microsoft.entityframeworkcore.sqlserver </p>
-   II.   <p> install-package Microsoft.EntityFrameworkCore.InMemory </p>
-   II.   <p> Install-Package RabbitMQ.Client </p>
- 
- </code>
- 
+
+ ```js
+   I.    install-package microsoft.entityframeworkcore.sqlserver 
+   II.   install-package Microsoft.EntityFrameworkCore.InMemory 
+   II.   install-Package RabbitMQ.Client 
+  ```
+
 2. Change the connection to your host and user name and password
  <code>
  factory.Uri = new Uri("amqp://user:password@localhost:5672");
