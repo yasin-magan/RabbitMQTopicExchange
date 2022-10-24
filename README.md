@@ -39,9 +39,9 @@ connection.Close();
 1. for the the three solutions , install there packages
 
  ```js
-   I.    install-package microsoft.entityframeworkcore.sqlserver 
-   II.   install-package Microsoft.EntityFrameworkCore.InMemory 
-   II.   install-Package RabbitMQ.Client 
+   I.    Install-Package Microsoft.entityframeworkcore.sqlserver 
+   II.   Install-Package Microsoft.EntityFrameworkCore.InMemory 
+   II.   Install-Package RabbitMQ.Client 
   ```
 
 2. Change the connection to your host and user name and password
