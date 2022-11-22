@@ -21,7 +21,7 @@ With a script tag:
 <script type="module" src="./node_modules/@github/clipboard-copy-element/dist/index.js">
 ```
 
-### Cennection Code
+### Connection Code
 
 ```js
 var factory = new ConnectionFactory();
